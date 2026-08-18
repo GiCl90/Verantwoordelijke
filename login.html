@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastlane — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Barlow', 'sans-serif'], condensed: ['Barlow Condensed', 'sans-serif'] } } } }</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <link rel="manifest" href="manifest-login.json">
+  <meta name="theme-color" content="#dc2626">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body class="bg-[#111111] text-white min-h-screen font-sans flex flex-col items-center gap-8 p-6 pt-12">
+
+  <img src="assets/logo-color.png" alt="Fastlane" class="h-16 w-auto">
+
+  <h1 class="text-2xl font-condensed font-bold uppercase tracking-wide text-gray-300">Wie ben jij vandaag?</h1>
+
+  <div id="vaste-namen" class="w-full max-w-[1200px] flex flex-wrap gap-3 justify-center"></div>
+
+  <div class="w-full max-w-sm flex flex-col gap-1.5 relative">
+    <label class="text-sm text-gray-400">Andere medewerker</label>
+    <button id="dropdown-knop" type="button"
+      class="h-11 rounded-lg bg-white/5 border border-white/10 text-white px-4 text-sm text-left flex items-center justify-between focus:outline-none focus:border-red-600">
+      <span id="dropdown-label" class="text-gray-500">Kies een naam...</span>
+      <svg class="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div id="dropdown-lijst"
+      class="hidden absolute top-full mt-1 w-full max-h-64 overflow-y-auto rounded-lg bg-[#1a1a1a] border border-white/10 z-10"></div>
+  </div>
+
+  <p id="bevestiging" class="text-sm min-h-[1.5em]"></p>
+
+  <script src="js/login.js"></script>
+  <script src="js/sw-register.js"></script>
+</body>
+</html>

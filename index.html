@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastlane — Verantwoordelijke</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Barlow', 'sans-serif'], condensed: ['Barlow Condensed', 'sans-serif'] } } } }</script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#dc2626">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body class="bg-[#111111] text-white min-h-screen font-sans flex flex-col items-center justify-center gap-10 p-6">
+
+  <img src="assets/logo-color.png" alt="Fastlane" class="h-16 w-auto">
+
+  <div class="text-center">
+    <p class="text-gray-400 text-lg uppercase tracking-widest font-condensed font-bold">De verantwoordelijke vandaag is</p>
+    <p id="verantwoordelijke-naam" class="mt-4 text-6xl md:text-7xl font-condensed font-extrabold uppercase italic text-red-500">Laden...</p>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script src="js/sw-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "Fastlane - Verantwoordelijke",
+  "short_name": "Verantwoordelijke",
+  "description": "Toont wie vandaag de verantwoordelijke is",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
